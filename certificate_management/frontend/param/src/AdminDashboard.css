@@ -1,0 +1,65 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin login section styling */
+.admin-login {
+    background-color: black; /* Black background for admin login section */
+    color: white; /* White text color for contrast */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+}
+
+/* File input styling */
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Upload status styling */
+.upload-status {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Navigation links styling */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

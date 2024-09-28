@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Directory for uploaded files
+uploads/
+
+# Temporary files
+*.tmp
+
+# Coverage directory used by testing tools
+coverage/
+
+# Build output (if any build tools are used)
+dist/
+build/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# npm package lock (if you prefer not to commit it)
+package-lock.json
+
+# Miscellaneous
+*.swp
+*.swo

@@ -1,0 +1,68 @@
+const generateCertificate = () => {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.src = '/template.jpeg';  // Path to your template image
+
+        img.onload = () => {
+            // Set canvas size to match the image size
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0);
+
+            // Set text style
+            ctx.font = '30px Arial';  // Font style and size
+            ctx.fillStyle = 'black';  // Text color
+            ctx.textAlign = 'center';  // Center text alignment
+
+            // Calculate positions based on the canvas size
+            const studentNameX = canvas.width / 2; // X-coordinate for student name
+            const studentNameY = 300; // Y-coordinate for student name
+            const courseNameX = canvas.width / 2; // X-coordinate for course name
+            const courseNameY = 400; // Y-coordinate for course name
+
+            // Draw student name
+            ctx.fillText(studentName, studentNameX, studentNameY);
+            // Draw course name
+            ctx.fillText(courseName, courseNameX, courseNameY);
+        };
+
+        img.onerror = (error) => {
+            console.error('Image failed to load:', error);
+        };
+    };
+
+    const downloadCertificate = () => {
+        const canvas = canvasRef.current;
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png'); // Convert canvas to image URL
+        link.download = 'certificate.png'; // File name for download
+        link.click(); // Trigger download
+    };
+
+
+    <button
+            onClick={downloadButton}
+          >
+            Generate Certificate
+          </button>
+<button onClick={handleSearch}>Search for Certificate</button>
+
+  const handleSearch =() => {
+    const a = "http://localhost:3010/certificate/"+certificateId
+    axios
+      .get(a)
+      .then((response) => {
+        setCertificate(response.data);
+
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+      
+  };
+  <p>Start Date: {certificate.startDate}</p>
+          <p>End Date: {certificate.endDate}</p>
